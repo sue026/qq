@@ -1,0 +1,527 @@
+@charset "utf-8";
+
+:root {
+   background: none;
+   --main-color: #47D3E5;
+   --y: 24%;
+   --x: 42%;
+   --maskSize: 13%;
+   user-select: none;
+}
+
+/* header */
+header {
+   position: absolute;z-index: 100;
+   left: 0;right: 0;top: 15px;
+   display: flex;
+   /* justify-content: space-between;
+   align-items: center; */
+   padding: 0 3%;
+}
+header h1 {
+   font-size: 24px;
+   /* font-weight: 700; */
+}
+header h1 a {display: flex;align-items: center;gap: 15px;}
+header h1 img {
+   padding: 10px;
+   width: 100px;height: 100px;
+   border: 1px solid #000;
+   border-radius: 50%;
+   background-color: #FFF;
+}
+header span {
+   font-family: 'RIDIBatang';
+   font-size: 1.2em;
+}
+header .menu {
+   position: fixed;
+   z-index: 1000; /*header 인덱스값보다 높여 메뉴가 맨상단에 위치하게 하기위함*/
+   right: 20px;top: 15px;
+   padding: 30px 30px;
+}
+header .menu:hover {
+   text-decoration: underline 4px var(--main-color);
+   text-underline-offset: 5px;
+   /* gnb 하나씩 언더라인 생기게 */
+}
+.menu .gnb {
+   display: flex;
+   gap: 40px;
+   align-items: flex-start;
+}
+.menu .gnb li {
+   font-family: 'NEXONFootballGothicBA1';
+   font-size: 26px;
+}
+
+
+/* home */
+.home {position: relative;}
+.home .mask {
+   width: 100%;height: 100vh;z-index: 5;
+   position: absolute;left: 0;top: 0;
+
+   mask-image: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #000 var(--maskSize, 0), transparent 0);
+}
+.home .home_bg {
+   position: relative;height: 100vh;overflow: hidden;
+}
+.home .home_main {
+   position: absolute;z-index: 10;
+   display: flex;flex-direction: column;
+   left: 0;right: 0;top: 50%;bottom: 10%;
+   padding: 0 12%;
+   gap: 20px;
+   font-size: 130px;
+   font-family: 'establishRoomNo703OTF';
+   transform: translateY(-50%);
+}
+.home_main span {
+   color: #292626;
+   letter-spacing: 2px;
+}
+.home_main p {
+   color: #8D7540;
+   letter-spacing: 2px;
+   align-self: flex-end;
+}
+.home_icon i {
+   /* position: relative; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 150px 0;
+   font-size: 35px;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.home_icon i:hover {
+   transform: scale(1.1);
+}
+
+
+/* about */
+.about {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 80px 0;
+   gap: 20px;
+   font-family: 'MaplestoryOTFBold';
+}
+/* 왼쪽과 오른쪽 정보를 나누는 두 열 레이아웃 */
+.about .about_content .about_left_wrap .about_left,
+.about_right_wrap .about_right {
+   display: flex;
+   flex-direction: column;
+   flex-basis: 50%;
+   width: 100%;
+   /* 왼쪽과 오른쪽의 너비 비율 */
+}
+/* 개별 섹션들 스타일링 */
+.about_left li, .about_right li {
+   list-style: none;
+}
+.about .about_content {
+   margin: 30px;
+   gap: 30px;
+}
+/* 자기소개 이미지 스타일 */
+.about .about_content img {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   max-width: 300px;
+   max-height: 300px;
+   width: 100%;height: 100%;
+   border-radius: 50%;
+}
+h2 {
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 30px;
+   text-decoration: underline var(--main-color) 4px;
+   text-underline-offset: 10px;
+   font-size: 40px;font-weight: bold;
+   font-family: 'NEXONFootballGothicBA1';
+}
+
+/* 왼쪽 단락: 프로필 및 스킬 */
+.about_content .about_left_wrap .about_left {
+   display: flex;
+   flex-direction: column;
+}
+.about_left_wrap .about_left h3 {
+   margin: 20px 60px;
+   font-size: 1.5em;
+   text-decoration: underline #000 3px;
+   text-underline-offset: 10px;
+}
+.about_left_wrap .about_left p {
+   text-align: left;
+   margin: 10px 80px;
+   font-size: 18px;
+}
+.about_left_wrap .about_left .e-mail {
+   cursor: pointer;
+}
+.about_left_wrap .about_left .e-mail:hover {
+   text-decoration: underline 2px var(--main-color);
+   text-underline-offset: 5px;
+}
+.about_content .about_left .skil_img {
+   text-align: center;
+}
+/* 스킬 아이콘 */
+.about_content .about_left li img {
+   display: inline-flex;
+   margin: 5px;
+   width: 50px;height: 50px;
+   border-radius: 0;
+}
+
+/* 오른쪽 단락: 경력, 교육, 자격증 */
+.about_right {
+   display: flex;
+   flex-basis: 45%;
+   gap: 30px;
+}
+
+/* about_right 박스 간격 조정 */
+.experience, .education, .licence {
+   background-color: #f9f9f9;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* about_right */
+.about_right .experience span,
+.about_right .education span,
+.about_right .licence span {
+   display: inline-block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+/* .about_right_wrap .about_right .experience span{
+   background-image: url(../img/experience_line.png) no-repeat;
+} */
+.about_right_wrap .about_right .data {
+   margin-left: 8px;
+   margin-bottom: 8px;
+   font-size: 1.1em;
+   color: #36363b;
+}
+.about_right_wrap .about_right .data::before {
+   content: "○ ";
+}
+.about_right_wrap .about_right p {
+   margin-left: 30px;
+}
+
+/* 모바일 : 화면이 작아질 때 열을 쌓기 */
+@media (max-width: 1035px) {
+   .about_content {
+      flex-direction: column;
+      gap: 30px;
+   }
+   .about_left, .about_right {
+      flex-basis: 80%;
+   }
+}
+@media (max-width: 768px) {
+   .about_content {
+      flex-direction: column;
+      gap: 40px;
+   }
+   .about_left, .about_right {
+      flex-basis: 100%;
+   }
+}
+
+
+/* portfolio */
+/* 공통 */
+.portfolio_hancome,
+.portfolio_kaist,
+.portfolio_HanwhaCulture,
+.portfolio_KumhoPetrochemicalGroup {
+   width: 100%;height: 100vh;
+   padding: 60px 5%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'ONE-Mobile-Title';
+   font-size: 20px;
+}
+.portfolio_hancome img,
+.portfolio_kaist img,
+.portfolio_HanwhaCulture img,
+.portfolio_KumhoPetrochemicalGroup img {
+   width: 100%;height: 100%;
+   object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+}
+
+
+/* 한컴 */
+.portfolio_hancome {
+   background-color: #f7f7f7;
+}
+
+/* 콘텐츠 스타일 */
+.portfolio_hancome .hancome_content {
+   column-count: 2;
+   flex-basis: 70%;
+   border: 1px solid #000;
+}
+
+/* 이미지 스타일 */
+.hancome_content .hancome_image img {
+
+}
+
+
+.hancome_content h3 {
+
+}
+
+/* Hancome 섹션 내부 레이아웃 */
+.hancome_section {
+   display: flex; /* 플렉스 박스를 사용하여 이미지와 텍스트를 나란히 배치 */
+   gap: 20px; /* 이미지와 텍스트 간의 간격 */
+}
+
+
+
+/* 텍스트 스타일 */
+.hancome_text {
+
+}
+
+/* 제목과 설명 텍스트 스타일 */
+.hancome_text h3 {
+   margin: 10px 0; /* 여백 설정 */
+}
+
+.hancome_text span,
+.hancome_text p {
+   margin: 5px 0; /* 단락 간 여백 */
+
+}
+
+
+/* 버튼 스타일 */
+.hancome_button {
+   display: flex;
+   justify-content: center; /* 버튼 중앙 정렬 */
+   gap: 20px; /* 버튼 사이 간격 */
+   margin-top: 20px; /* 버튼 위 여백 */
+}
+
+.hancome_button button {
+   background-color: #007bff;
+   color: white;
+   border: none; /* 테두리 제거 */
+   border-radius: 10px;
+   padding: 10px 20px; /* 여백 설정 */
+   cursor: pointer; /* 커서 모양 변경 */
+   transition: background-color 0.3s ease; /* 배경 색상 변경 시 애니메이션 */
+}
+.hancome_button button:hover {
+   background-color: #0056b3;
+}
+.hancome_button a {
+   text-decoration: none; /* 링크의 밑줄 제거 */
+   color: inherit; /* 부모 색상 계승 */
+}
+
+/* 카이스트 */
+.portfolio_kaist {background: #CADAE4;}
+.portfolio_kaist .kaist_content {
+   column-count: 2;
+   flex-basis: 70%;
+   border: 1px solid #000;
+}
+
+/* 버튼 */
+.kaist_button {
+   display: flex;
+   justify-content: center; /* 버튼 중앙 정렬 */
+   gap: 20px; /* 버튼 사이 간격 */
+   margin-top: 20px; /* 버튼 위 여백 */
+}
+
+.kaist_button button {
+   background-color: #007bff;
+   color: white;
+   border: none; /* 테두리 제거 */
+   border-radius: 10px;
+   padding: 10px 20px; /* 여백 설정 */
+   cursor: pointer; /* 커서 모양 변경 */
+   transition: background-color 0.3s ease; /* 배경 색상 변경 시 애니메이션 */
+}
+.kaist_button button:hover {
+   background-color: #0056b3;
+}
+.kaist_button a {
+   text-decoration: none; /* 링크의 밑줄 제거 */
+   color: inherit; /* 부모 색상 계승 */
+}
+
+/* 한화문화재단 */
+.portfolio_HanwhaCulture {
+   background: hsl(25, 47%, 73%);
+}
+.HanwhaCulture_content {
+   column-count: 2;
+   flex-basis: 70%;
+   border: 1px solid #000;
+}
+.HanwhaCulture_content .HanwhaCulture_image {}
+
+/* 버튼 */
+.HanwhaCulture_button {
+   display: flex;
+   justify-content: center; /* 버튼 중앙 정렬 */
+   gap: 20px; /* 버튼 사이 간격 */
+   margin-top: 20px; /* 버튼 위 여백 */
+}
+
+.HanwhaCulture_button button {
+   background-color: #007bff;
+   color: white;
+   border: none; /* 테두리 제거 */
+   border-radius: 10px;
+   padding: 10px 20px; /* 여백 설정 */
+   cursor: pointer; /* 커서 모양 변경 */
+   transition: background-color 0.3s ease; /* 배경 색상 변경 시 애니메이션 */
+}
+.HanwhaCulture_button button:hover {
+   background-color: #0056b3;
+}
+.HanwhaCulture_button a {
+   text-decoration: none; /* 링크의 밑줄 제거 */
+   color: inherit; /* 부모 색상 계승 */
+}
+
+/* 금호석유화학 */
+.portfolio_KumhoPetrochemicalGroup {
+   background: #a9e4e1;
+}
+.KumhoPetrochemicalGroup_content {
+   column-count: 2;
+   flex-basis: 70%;
+   border: 1px solid #000;
+}
+
+/* 버튼 */
+.KumhoPetrochemicalGroup_button {
+   display: flex;
+   justify-content: center; /* 버튼 중앙 정렬 */
+   gap: 20px; /* 버튼 사이 간격 */
+   margin-top: 20px; /* 버튼 위 여백 */
+}
+
+.KumhoPetrochemicalGroup_button button {
+   background-color: #007bff;
+   color: white;
+   border: none; /* 테두리 제거 */
+   border-radius: 10px;
+   padding: 10px 20px; /* 여백 설정 */
+   cursor: pointer; /* 커서 모양 변경 */
+   transition: background-color 0.3s ease; /* 배경 색상 변경 시 애니메이션 */
+}
+.KumhoPetrochemicalGroup_button button:hover {
+   background-color: #0056b3;
+}
+.KumhoPetrochemicalGroup_button a {
+   text-decoration: none; /* 링크의 밑줄 제거 */
+   color: inherit; /* 부모 색상 계승 */
+}
+
+
+
+/* contact */
+.contact {
+   background-color: #292626; /* 배경 색상 */
+   color: white; /* 텍스트 색상 */
+   /* width: 100%;height: 100; */
+   font-family: 'ONE-Mobile-Title';
+   padding: 10px;
+}
+
+.contact_inner {
+
+}
+
+/* contact 제목 스타일 */
+.contact_inner h2 {
+   /* padding: 50px;
+   font-size: 2.5em;
+   margin-bottom: 10px; */
+}
+
+/* 소개 텍스트 스타일 */
+.contact_introduction p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 0; /* 단락 간 여백 */
+   font-size: 30px;
+}
+
+/* QR 코드 스타일 */
+.contact_introduction img {
+   border-radius: 10px;
+   margin: 40px auto;
+}
+
+/* 아이콘 리스트 스타일 */
+.contact_inner .contact_icon {
+   display: flex;
+   color: #f9f9f9;
+   justify-content: center;
+   align-items: center;
+   list-style-type: none;
+   gap: 30px;
+}
+
+.contact_icon li {
+   transition: transform 0.3s; /* 애니메이션 효과 */
+   list-style: none;
+}
+.contact_icon li:hover {
+   transform: scale(1.2); /* 호버 시 확대 효과 */
+}
+
+/* 저작권 */
+.copyright {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 0;
+   letter-spacing: 1px;
+   font-size: 1em;
+}
+.arrow_icon {
+   display: flex;
+   justify-content: flex-end;
+   align-items: start;
+   margin: 40px;
+   z-index: 9999;
+}
+/* 화살표 버튼 스타일 */
+.arrow_icon button a {
+   /* position: fixed */
+   font-size: 1.8em; /* 아이콘 크기 */
+   padding: 18px; /* 아이콘 배경 */
+   opacity: 0.6;
+   border-radius: 50%;
+   cursor: pointer;
+   border: 1px solid #FFF;
+}
+
+
+

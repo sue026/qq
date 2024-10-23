@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+   <title>LDH 포트폴리오</title>
+   <!-- CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.0/themes/base/theme.min.css">
+   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/font.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+   <script src="js/main.js" defer></script>
+</head>
+<body>
+   <!-- header -->
+   <header>
+      <h1><a href="#">
+         <img src="./img/header_logo.png" alt="헤더로고">
+         <span>
+            LEE <br>
+            DONGHEE
+         </span>
+      </a></h1>
+      <nav class="menu">
+         <ul class="gnb">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <!-- home -->
+   <section class="home">
+      <div class="mask">
+         <img src="./img/sea_background.jpg" alt="해변">
+      </div>
+      <div class="home_bg">
+         <img src="./img/beach-background.jpg" alt="모래" style="opacity: 0.2;">
+      </div>
+      <div class="home_main">
+         <span>PORTFOLIO &</span>
+         <p>WEBPUBLISHER</p>
+         <div class="home_icon"><i class="ri-scroll-to-bottom-line"></i></div>
+      </div>
+   </section>
+
+   <!-- about -->
+	<section class="about">
+      <div class="background-opacity"></div>
+         <!--  배경을 위한 추가 레이어 -->
+      <div class="about_content">
+         <h2>ABOUT ME</h2>
+         <img src="./img/mypicture.jpg" alt="자기소개 사진" style="margin: auto;">
+         <div class="about_left_wrap">
+            <ul class="about_left">
+               <li>
+                  <h3>PROFILE</h3>
+                  <p>이    름 : 이 동 희 </p>
+                  <p>생년월일 : 1996.10.02</p>
+                  <p>이 메 일 :<a class="e-mail" href="mailto:leedonghee96@daum.net"> leedonghee96@daum.net</a></p>
+               </li>
+               <li>
+                  <h3>SKIL</h3>
+                     <div class="skil_img">
+                        <img src="./img/html_icon.png" alt="html">
+                        <img src="./img/css_icon.png" alt="css">
+                        <img src="./img/jquery_icon.png" alt="jquery">
+                        <img src="./img/js_icon.png" alt="js">
+                        <img src="./img/react_icon.png" alt="react">
+                        <img src="./img/figma_Icon.png" alt="figma" style="border-radius: 10px;">
+                        <img src="./img/photoshop_icon.png" alt="photoshop_icon">
+                     </div>
+               </li>
+            </ul>
+         </div>
+		</div>
+      <div class="about_right_wrap">
+         <ul class="about_right">
+            <li>
+               <div class="experience">
+                  <span>EXPERIENCE</span>
+                  <p class="data">2022.07~2023.01</p>
+                  <p>(주)케이엘큐브 AI플랫폼
+                        사업본부 데이터컨버젼스팀</p>
+                        <br>
+                  <p class="data">2023.04~2024.02</p>
+                  <p>(주)정도정보통신 정산파트</p>
+               </div>
+            </li>
+            <li>
+               <div class="education">
+                  <span>EDUCATION</span>
+                  <p class="data">2024.05.16~2024.11.11</p>
+                  <p>MBC 이젠아카데미 컴퓨터교육센터 UI/UX 웹디자인 웹퍼플리셔 & 프론트엔드
+                     전문가 양성 수료</p>
+               </div>
+            </li>
+            <li>
+               <div class="licence">
+                  <span>LICENCE</span>
+                  <p class="data">2024.09~ </p>
+                  <p>사회복지사 2급</p>
+               </div>
+            </li>
+         </ul>
+      </div>
+	</section>
+
+   <!-- portfolio -->
+   <section class="portfolio_hancome">
+      <div class="hancome_content">
+         <h2>PORTFOLIO</h2>
+         <div class="hancome_image">
+            <img src="./img/imac_hancome.png" alt="hancome"/>
+         </div>
+
+            <div class="hancome_text">
+               <h3>HANCOME</h3>
+               <span>VSCODE를 활용한 한글과 컴퓨터 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다.
+                  해상도 기준 1920px 기준입니다.</span>
+               <p>#HTML #CSS #JQUERY #HANCOME</p>
+            </div>
+
+         <div class="hancome_button">
+            <button><a href="../hancome/index.html" class="hancome_visit">Visit</a></button>
+            <button><a href="#" class="hancome_code">Code Review</a></button> <!-- 깃허브로 연결 / https://velog.io/@ahnsanghyeon/VSCode%EC%97%90%EC%84%9C-Git-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0 참고-->
+         </div>
+      </div>
+   </section>
+
+   <section class="portfolio_kaist">
+      <div class="kaist_content">
+
+         <section class="kaist_section">
+            <div class="kaist_image">
+               <img src="./img/kaist_laptop.png" alt="kaist" />
+            </div>
+         </section>
+
+         <div class="kaist_text">
+            <h3>KAIST</h3>
+            <span>카이스트 공식 사이트를 클론 코딩하여 만든 PC 버전 반응형 웹사이트입니다.
+               해상도 기준 1920px 기준입니다.</span>
+            <p>#HTML #CSS #JQUERY #JAVASCRIPT #KAIST</p>
+         </div>
+         <div class="kaist_button">
+            <button><a href="../kaist/index.html" class="kaist_visit">Visit</a></button>
+            <button><a href="" class="kaist_code">Code Review</a></button> <!-- 깃허브로 연결 -->
+         </div>
+      </div>
+   </section>
+
+   <section class="portfolio_HanwhaCulture">
+      <div class="HanwhaCulture_content">
+         <div class="HanwhaCulture_image">
+            <img src="./img/imac.png" alt="HanwhaCulture" style="width: 100px;height: 100px;"/>
+         </div>
+         <div class="HanwhaCulture">
+            <h3>HanwhaCulture</h3>
+            <span>한화문화재단 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다. 해상도 기준 1920px 기준입니다.</span>
+            <p>#HTML #CSS #JQUERY #JAVASCRIPT #HanwhaCulture</p>
+         </div>
+         <div class="HanwhaCulture_button">
+            <button><a href="../HanwhaCulture/hanwhaculture.html" class="HanwhaCulture_visit">Visit</a></button>
+            <button><a href="" class="HanwhaCulture_code">Code Review</a></button> <!-- 깃허브로 연결 -->
+         </div>
+      </div>
+   </section>
+
+   <section class="portfolio_KumhoPetrochemicalGroup">
+      <div class="KumhoPetrochemicalGroup_content">
+         <div class="KumhoPetrochemicalGroup_image">
+            <img src="./img/imac.png" alt="KumhoPetrochemicalGroup" style="width: 100px;height: 100px;"/>
+         </div>
+         <div class="KumhoPetrochemicalGroup">
+            <h3>KumhoPetrochemicalGroup</h3>
+            <span>금호석유화학 공식 사이트와 기업 사이트를 참고하여 만든 PC 버전 웹사이트입니다.
+               해상도 기준 1920px 기준입니다.</span>
+            <p>#HTML #CSS #JQUERY #JAVASCRIPT #KumhoPetrochemicalGroup</p>
+         </div>
+         <div class="KumhoPetrochemicalGroup_button">
+            <button><a href="../../KumhoPetrochemicalGroup/index1.html" class="KumhoPetrochemicalGroup_visit">Visit</a></button>
+            <button><a href="" class="kaist_code">Code Review</a></button> <!-- 깃허브로 연결 -->
+         </div>
+      </div>
+   </section>
+
+   <!-- footer -->
+   <footer class="contact">
+      <div class="contact_inner">
+         <h2>CONTACT</h2>
+         <div class="contact_introduction">
+            <p>Thank you </p>
+            <p>스스로에게 한계를 두지 않고 끊임없이 성장하는 웹퍼플리셔가 되겠습니다.</p>
+            <img src="./img/kakao_qr.png" alt="카카오톡 친구추가" style="width: 200px;height: 200px;">
+         </div>
+         <ul class="contact_icon">
+            <li><a href="#" target="_blank">
+               <img src="./img/message.png" alt="메세지" title="메세지">
+            </a></li>
+            <li><a href="#" target="_blank">
+               <img src="./img/instagram.png" alt="인스타그램" title="인스타그램">
+            </a></li>
+            <li><a href="#" target="_blank">
+               <img src="./img/e-mail.png" alt="이메일" title="이메일">
+            </a></li>
+            <li><a href="#" target="_blank">
+               <img src="./img/github.png" alt="깃허브" title="깃허브">
+            </a></li>
+         </ul>
+         <small class="copyright">
+            Copyright ⓒ 2024 LEE DONGHEE.ALL RIGHTS RESERVED.
+         </small>
+         <div class="arrow_icon">
+            <button><a href="#"><i class="ri-arrow-up-s-line"></i></a></button>
+         </div>
+      </div>
+   </footer>
+	</body>
+</html>
