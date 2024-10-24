@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* header */
+/* home_main */
 @font-face {
    font-family: 'establishRoomNo703OTF';
    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
@@ -8,19 +8,14 @@
    font-style: normal;
 }
 
+/* header h1 */
 @font-face {
    font-family: 'RIDIBatang';
    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-   font-weight: 700;
-}
-
-
-@font-face {
-   font-family: 'MaplestoryOTFBold';
-   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
    font-weight: normal;
    font-style: normal;
 }
+
 
 
 /* h2 */
