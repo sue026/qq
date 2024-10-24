@@ -283,6 +283,7 @@ h2 {
 .portfolio_hancome .hancome_content {
    column-count: 2;
    flex-basis: 70%;
+   width: 70%;
 }
 .portfolio_hancome .hancome_content h2 {
    margin-left: -40px;
@@ -590,39 +591,31 @@ h2 {
 }
 
 
-
 /* contact */
 .contact {
-   background-color: #292626; /* 배경 색상 */
-   color: white; /* 텍스트 색상 */
-   /* width: 100%;height: 100; */
-   font-family: 'ONE-Mobile-Title';
-   padding: 10px;
-}
-
-.contact_inner {
-
-}
-
-/* contact 제목 스타일 */
-.contact_inner h2 {
-   /* padding: 50px;
-   font-size: 2.5em;
-   margin-bottom: 10px; */
-}
-
-/* 소개 텍스트 스타일 */
-.contact_introduction p {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 10px 0; /* 단락 간 여백 */
-   font-size: 30px;
+   width: 100%;height: 80vh;
+   background-color: #292626;
+   color: white;
+   font-family: 'DungGeunMo';
+   }
+.contact_inner {
+   position: relative;
+   width: 70%;
+}
+/* 소개 */
+.contact_introduction p {
+   display: flex;
+   justify-content: center;
+   margin: 15px 0;
+   font-size: 25px;
 }
 
 /* QR 코드 스타일 */
 .contact_introduction img {
-   border-radius: 10px;
+   border-radius: 5px;
    margin: 30px auto;
 }
 
@@ -635,9 +628,8 @@ h2 {
    list-style-type: none;
    gap: 30px;
 }
-
 .contact_icon li {
-   padding: 10px;
+   padding: 6px;
    transition: transform 0.3s; /* 애니메이션 효과 */
    list-style: none;
 }
@@ -645,31 +637,31 @@ h2 {
    transform: scale(1.1); /* 호버 시 확대 효과 */
 }
 
-/* 저작권 */
-.copyright {
+/* contact_footer */
+.footer_copyright {
    display: flex;
-   /* justify-content: center; */
-   border: 1px solid #000;
-   letter-spacing: 1px;
-   font-size: 15px;font-weight: 10;
+   justify-content: space-between;
+   align-items: flex-end;
 }
-.arrow_icon {
-   display: flex;
-   justify-content: flex-end;
-   align-items: start;
-   margin: 40px;
-   z-index: 9999;
+.footer_copyright .copyright {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-55%);
+   margin-bottom: -17%;
+   letter-spacing: 1;
+   font-size: 17px;
+   font-weight: 1;
 }
-/* 화살표 버튼 스타일 */
-.arrow_icon button a {
-   /* position: fixed */
-   font-size: 1.8em; /* 아이콘 크기 */
-   padding: 18px; /* 아이콘 배경 */
-   opacity: 0.6;
+.footer_top {
+   position: relative;
+   left: 10%;
+   bottom: -35%;
+}
+.footer_top button {
+   position: sticky;
+   font-size: 40px;
+   padding: 13px;
    border-radius: 50%;
    cursor: pointer;
-   border: 1px solid #FFF;
+   border: 2px solid #FFF;
 }
-
-
-

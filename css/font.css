@@ -16,8 +16,6 @@
    font-style: normal;
 }
 
-
-
 /* h2 */
 @font-face {
    font-family: 'NEXONFootballGothicBA1';
@@ -26,11 +24,19 @@
    font-style: normal;
 }
 
-/* about, portfolio, contact */
+/* about, portfolio*/
 @font-face {
    font-family: 'ONE-Mobile-Title';
    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
    font-weight: normal;
    font-style: normal;
 }
-/* 닷홈엔 본론 글꼴 적용이 안됨.확인하기 */
+
+
+/* contact */
+@font-face {
+   font-family: 'DungGeunMo';
+   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
