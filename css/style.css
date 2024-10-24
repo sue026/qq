@@ -123,6 +123,7 @@ header .menu:hover {
    justify-content: center;
    flex-basis: 50%;
    border: 1px solid #000;
+   font-family: 'ONE-Mobile-Title';
 }
 /* 개별 섹션들 스타일링 */
 .about_left li, .about_right li {
