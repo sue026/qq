@@ -5,18 +5,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <title>LDH PORTFOLIO</title>
    <!-- CSS -->
+   <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.0/themes/base/theme.min.css">
    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-   <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/font.css">
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+
 
    <!-- JS -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
    <script src="js/main.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
 </head>
 <body>
    <!-- header -->
@@ -28,13 +31,13 @@
             DONGHEE
          </span>
       </a></h1>
-      <nav class="menu">
-         <ul class="gnb">
+      <div class="menu">
+         <ul id="gnb">
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">PORTFOLIO</a></li>
             <li><a href="#">CONTACT</a></li>
          </ul>
-      </nav>
+      </div>
    </header>
 
    <!-- home -->
@@ -115,7 +118,7 @@
 	</section>
 
    <!-- portfolio -->
-   <section class="portfolio_hancome">
+   <section class="p_hancome">
       <div class="hancome_content">
          <h2>PORTFOLIO</h2>
          <div class="hancome_image">
@@ -131,14 +134,14 @@
             </div>
 
             <div class="hancome_button">
-               <button><a href="https://dong507.github.io/ldh/" target="_blank">Visit Website</a></button>
-               <button><a href="https://github.com/dong507/ldht=" target="_blank">Code Review</a></button> <!-- 깃허브로 연결-->
+               <button><a href="https://dong507.github.io/hancom/" target="_blank">Visit Website</a></button>
+               <button><a href="https://github.com/dong507/hancom" target="_blank">Code Review</a></button>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="portfolio_kaist">
+   <section class="p_kaist">
       <div class="kaist_content">
 
          <div class="kaist_image">
@@ -153,14 +156,14 @@
                <p>#HTML #CSS #JQUERY #JAVASCRIPT #KAIST</p>
             </div>
             <div class="kaist_button">
-               <button><a href="../kaist/index.html" target="_blank">Visit Website</a></button>
-               <button><a href="" target="_blank">Code Review</a></button> <!-- 깃허브로 연결 -->
+               <button><a href="https://dong507.github.io/kaist/" target="_blank">Visit Website</a></button>
+               <button><a href="https://github.com/dong507/kaist" target="_blank">Code Review</a></button>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="portfolio_webpublic">
+   <section class="p_webpublic">
       <div class="webpublic_content">
 
          <div class="webpublic_image">
@@ -172,17 +175,17 @@
                <h3>WEBPUBLISHER</h3>
                <span>개인 포트폴리오 사이트를 제작하여 만든 PC 버전 반응형 웹사이트입니다. <br>
                   해상도 기준 1920px 기준입니다.</span>
-               <p>#HTML #CSS #JQUERY #JAVASCRIPT #WEBPUBLISHER</p>
+               <p>#HTML #CSS #JQUERY #WEBPUBLISHER</p>
             </div>
             <div class="webpublic_button">
-               <button><a href="https://dong507.github.io/ldh/" target="_blank">Visit Website</a></button>
-               <button><a href="https://github.com/dong507/ldh" target="_blank">Code Review</a></button> <!-- 깃허브로 연결 -->
+               <button><a href="https://dong507.github.io/portfolio/" target="_blank">Visit Website</a></button>
+               <button><a href="https://github.com/dong507/ldh" target="_blank">Code Review</a></button>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="portfolio_HanwhaCulture">
+   <section class="p_HanwhaCulture">
       <div class="HanwhaCulture_content">
 
          <div class="HanwhaCulture_image">
@@ -193,23 +196,22 @@
             <div class="HanwhaCulture_text">
                <h3>HanwhaCulture</h3>
                <span>한화문화재단 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다. <br> 해상도 기준 1920px 기준입니다.</span>
-               <p>#HTML #CSS #JQUERY #JAVASCRIPT #HanwhaCulture</p>
+               <p>#HTML #CSS #HanwhaCulture</p>
             </div>
             <div class="HanwhaCulture_button">
                <button><a href="../HanwhaCulture/hanwhaculture.html" target="_blank">Visit Website</a></button>
-               <button><a href="" target="_blank">Code Review</a></button> <!-- 깃허브로 연결 -->
+               <button><a href="" target="_blank">Code Review</a></button>
             </div>
          </div>
       </div>
    </section>
 
-   <section class="portfolio_KumhoPetrochemicalGroup">
-      <div class="KumhoPetrochemicalGroup_content">
 
+   <section class="p_KumhoPetrochemicalGroup">
+      <div class="KumhoPetrochemicalGroup_content">
          <div class="KumhoPetrochemicalGroup_image">
             <img src="./img/imac.png" alt="KumhoPetrochemicalGroup" style="width: 400px;height: 400px;"/>
          </div>
-
          <div class="KumhoPetrochemicalGroup_wrap">
             <div class="KumhoPetrochemicalGroup_text">
                <h3>KumhoPetrochemicalGroup</h3>
@@ -219,7 +221,7 @@
             </div>
             <div class="KumhoPetrochemicalGroup_button">
                <button><a href="" target="_blank">Visit Website</a></button>
-               <button><a href="" target="_blank">Code Review</a></button> <!-- 깃허브로 연결 -->
+               <button><a href="" target="_blank">Code Review</a></button>
             </div>
          </div>
       </div>
@@ -244,7 +246,7 @@
             <li><a href="mailto:leedonghee96@daum.net">
                <img src="./img/e-mail.png" alt="이메일" title="이메일">
             </a></li>
-            <li><a href="https://github.com/dong507/" target="_blank">
+            <li><a href="https://github.com/dong507 " target="_blank">
                <img src="./img/github.png" alt="깃허브" title="깃허브">
             </a></li>
          </ul>
@@ -258,5 +260,8 @@
          <button><a href="#"><i class="ri-arrow-up-s-line"></i></a></button>
       </div>
    </footer>
+
+
+
 	</body>
 </html>

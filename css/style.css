@@ -2,13 +2,12 @@
 
 :root {
    background: none;
-   --main-color: #47D3E5;
+   --main-color: #E7CCA7;
    --y: 24%;
    --x: 42%;
    --maskSize: 13%;
    user-select: none;
 }
-
 
 /* header */
 header {
@@ -41,19 +40,17 @@ header .menu {
    right: 20px;top: 15px;
    padding: 30px 30px;
 }
-header .menu:hover {
-   text-decoration: underline 4px var(--main-color);
-   text-underline-offset: 5px;
-   /* gnb 하나씩 언더라인 생기게 */
-}
-.menu .gnb {
+
+.menu #gnb {
    display: flex;
-   gap: 40px;
    align-items: flex-start;
-}
-.menu .gnb li {
+   gap: 40px;
    font-family: 'NEXONFootballGothicBA1';
    font-size: 26px;
+}
+.menu #gnb li a:hover {
+   color: var(--main-color);
+   text-shadow: 1;
 }
 
 
@@ -250,11 +247,11 @@ h2 {
 /* portfolio */
 
 /* 공통 */
-.portfolio_hancome,
-.portfolio_kaist,
-.portfolio_webpublic,
-.portfolio_HanwhaCulture,
-.portfolio_KumhoPetrochemicalGroup {
+.p_hancome,
+.p_kaist,
+.p_webpublic,
+.p_HanwhaCulture,
+.p_KumhoPetrochemicalGroup {
    width: 100%;height: 100vh;
    padding: 60px 5%;
    display: flex;
@@ -264,28 +261,28 @@ h2 {
    font-size: 16px;
    line-height: 1.5;
 }
-.portfolio_hancome img,
-.portfolio_kaist img,
-.portfolio_webpublic img,
-.portfolio_HanwhaCulture img,
-.portfolio_KumhoPetrochemicalGroup img {
+.p_hancome img,
+.p_kaist img,
+.p_webpublic img,
+.p_HanwhaCulture img,
+.p_KumhoPetrochemicalGroup img {
    width: 90%;height: 100%;
    object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
 }
 
 
 /* 한컴 */
-.portfolio_hancome {
+.p_hancome {
    background-color: #f7f7f7;
 }
 
 /* hancome_content */
-.portfolio_hancome .hancome_content {
+.p_hancome .hancome_content {
    column-count: 2;
    flex-basis: 70%;
    width: 70%;
 }
-.portfolio_hancome .hancome_content h2 {
+.p_hancome .hancome_content h2 {
    margin-left: -40px;
    margin-bottom: 50px;
 }
@@ -340,20 +337,20 @@ h2 {
 
 
 /* 카이스트 */
-.portfolio_kaist {background-color: #d3e3ec;}
+.p_kaist {background-color: #d3e3ec;}
 
 /* kaist_content */
-.portfolio_kaist .kaist_content {
+.p_kaist .kaist_content {
    column-count: 2;
    flex-basis: 70%;
 }
-.portfolio_kaist .kaist_content h2 {
+.p_kaist .kaist_content h2 {
    margin: 30px 0;
 }
 
 /* img */
 .kaist_content .kaist_image img {
-   display: block;
+   /* display: block; */
    max-width: 100%;
 }
 
@@ -364,7 +361,7 @@ h2 {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   gap: 30px;
+   gap: 20px; /*h3, span, p 간격*/
 }
 .kaist_wrap .kaist_text h3 {
    font-size: 2.2em;
@@ -402,14 +399,14 @@ h2 {
 
 
 /* 개인포폴 */
-.portfolio_webpublic {background: #B6CCBD;}
+.p_webpublic {background: #B6CCBD;}
 
 /* webpublic_content */
-.portfolio_webpublic .webpublic_content {
+.p_webpublic .webpublic_content {
    column-count: 2;
    flex-basis: 70%;
 }
-.portfolio_webpublic .webpublic_content h2 {
+.p_webpublic .webpublic_content h2 {
    margin: 30px 0;
 }
 
@@ -464,14 +461,14 @@ h2 {
 
 
 /* 한화문화재단 */
-.portfolio_HanwhaCulture {background: #FFD58D;}
+.p_HanwhaCulture {background: #FFD58D;}
 
 /* HanwhaCulture_content */
-.portfolio_HanwhaCulture .HanwhaCulture_content {
+.p_HanwhaCulture .HanwhaCulture_content {
    column-count: 2;
    flex-basis: 70%;
 }
-.portfolio_HanwhaCulture .HanwhaCulture_content h2 {
+.p_HanwhaCulture .HanwhaCulture_content h2 {
    margin: 30px 0;
 }
 
@@ -527,16 +524,16 @@ h2 {
 
 
 /* 금호석유화학 */
-.portfolio_KumhoPetrochemicalGroup {
+.p_KumhoPetrochemicalGroup {
    background: #cfcfcf;
 }
 
 /* webpublic_content */
-.portfolio_KumhoPetrochemicalGroup .KumhoPetrochemicalGroup_content {
+.p_KumhoPetrochemicalGroup .KumhoPetrochemicalGroup_content {
    column-count: 2;
    flex-basis: 70%;
 }
-.portfolio_KumhoPetrochemicalGroup .KumhoPetrochemicalGroup_content h2 {
+.p_KumhoPetrochemicalGroup .KumhoPetrochemicalGroup_content h2 {
    margin: 30px 0;
 }
 
@@ -604,6 +601,7 @@ h2 {
 .contact_inner {
    position: relative;
    width: 70%;
+   margin-left: 100px;
 }
 /* 소개 */
 .contact_introduction p {
@@ -647,19 +645,19 @@ h2 {
    position: absolute;
    left: 50%;
    transform: translateX(-55%);
-   margin-bottom: -17%;
+   margin-bottom: -18%;
    letter-spacing: 1;
    font-size: 17px;
    font-weight: 1;
 }
 .footer_top {
    position: relative;
-   left: 10%;
-   bottom: -35%;
+   left: 110px;
+   bottom: -38%;
 }
 .footer_top button {
    position: sticky;
-   font-size: 40px;
+   font-size: 35px;
    padding: 13px;
    border-radius: 50%;
    cursor: pointer;
