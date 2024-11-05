@@ -619,7 +619,14 @@ h2 {
    color: inherit;
 }
 /* swiper-silder */
+.swiper_pagination {
+
+   display: flex;
+   justify-content: center;
+}
+.swiper_pagination span
 .swiper_button_prev, .swiper_button_next {
+   display: flex;
 
    border: 1px solid #000;
 }
