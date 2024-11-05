@@ -9,13 +9,14 @@
    <link rel="stylesheet" href="css/font.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.0/themes/base/theme.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/main.css">
 
 
    <!-- JS -->
    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -30,16 +31,16 @@
       </a></h1>
       <div class="menu">
          <ul id="gnb">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PUBLISHING</a></li>
-            <li><a href="#">DESIGN</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#about_me">ABOUT</a></li>
+            <li><a href="#publishing">PUBLISHING</a></li>
+            <!-- <li><a href="#">DESIGN</a></li> -->
+            <li><a href="#contact_section">CONTACT</a></li>
          </ul>
       </div>
    </header>
 
    <!-- home -->
-   <div class="home">
+   <div class="home" id="home_section">
       <div class="mask">
          <img src="./img/sea_background.jpg" alt="해변">
       </div>
@@ -49,14 +50,14 @@
       <div class="home_main">
          <span>PORTFOLIO &</span>
          <p>WEBPUBLISHER</p>
-         <div class="home_icon"><i class="ri-scroll-to-bottom-line"></i></div>
+         <div class="home_icon"><a href="#about_me">
+            <i class="ri-scroll-to-bottom-line"></i>
+         </a></div>
       </div>
    </div>
 
    <!-- about -->
-	<section class="about">
-      <div class="background-opacity"></div>
-         <!--  배경을 위한 추가 레이어 -->
+	<section class="about" id="about_me">
       <div class="about_content">
          <h2>ABOUT ME</h2>
          <img src="./img/mypicture.jpg" alt="자기소개 사진" style="margin: auto;">
@@ -69,22 +70,15 @@
                   <p>이 메 일 :<a class="e-mail" href="mailto:leedonghee96@daum.net"> leedonghee96@daum.net</a></p>
                </li>
                <li>
-                  <h3>SKILL</h3>
-                     <div class="skill">
-                        <p>#HTML</p>
-                        <p>#CSS</p>
-                        <p>#JQUERY</p> <br>
-                        <p>#JAVASCRIPT</p>
-                        <p>#FIGMA</p>
-                        <p>#PHOTOSHOP</p>
-                        <!-- <img src="./img/html_icon.png" alt="html">
-                        <img src="./img/css_icon.png" alt="css">
-                        <img src="./img/jquery_icon.png" alt="jquery">
-                        <img src="./img/js_icon.png" alt="js">
-                        <img src="./img/react_icon.png" alt="react">
-                        <img src="./img/figma_Icon.png" alt="figma">
-                        <img src="./img/photoshop_icon.png" alt="photoshop_icon"> -->
-                     </div>
+               <h3>SKILL</h3>
+                  <div class="skill">
+                     <p>#HTML</p>
+                     <p>#CSS</p>
+                     <p>#JQUERY</p> <br>
+                     <p>#JAVASCRIPT</p>
+                     <p>#FIGMA</p>
+                     <p>#PHOTOSHOP</p>
+                  </div>
                </li>
             </ul>
          </div>
@@ -95,11 +89,11 @@
                <div class="experience">
                   <span>EXPERIENCE</span>
                   <p class="data">2022.07~2023.01</p>
-                  <p>(주)케이엘큐브 AI플랫폼
-                        사업본부 데이터컨버젼스팀</p>
+                  <p>(주)케이엘큐브 플랫폼
+                        사업본부 AI 지식 구축팀 사원</p>
                         <br>
                   <p class="data">2023.04~2024.02</p>
-                  <p>(주)정도정보통신 정산파트</p>
+                  <p>(주)정도정보통신 정산파트팀 사원</p>
                </div>
             </li>
             <li>
@@ -113,7 +107,7 @@
             <li>
                <div class="licence">
                   <span>LICENCE</span>
-                  <p class="data">2024.09~ </p>
+                  <p class="data">2024.09.19 </p>
                   <p>사회복지사 2급</p>
                </div>
             </li>
@@ -122,20 +116,21 @@
 	</section>
 
    <!-- publishing portfolio -->
-   <section class="swiper1 coding_pofol">
-      <div class="swiper-wrapper">
-         <div class="p_hancom swiper-slide">
+   <section class="swiper_publishing_porfol" id="swp">
+      <div class="swiper_wrapper">
+         <div class="hancom_swiper_slide" id="publishing">
             <div class="hancom_content">
-               <h2>PORTFOLIO</h2>
+               <h2>PUBLISHING</h2>
                <div class="hancom_image">
-                  <img src="./img/imac_hancom.png" alt="hancome"/>
+                  <img src="./img/imac_hancom.png" alt="hancom"/>
                </div>
 
                <div class="hancom_wrap">
                   <div class="hancom_text">
                      <h3>HANCOM</h3>
                      <span>VSCODE를 활용한 한글과 컴퓨터 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다.
-                        해상도 기준 1920px 기준입니다.</span>
+                        해상도 기준 1920px 기준입니다.
+                     </span>
                      <p>#HTML #CSS #JQUERY #HANCOM</p>
                   </div>
 
@@ -147,18 +142,16 @@
             </div>
          </div>
 
-         <div class="p_kaist">
+         <div class="kaist_swiper_slide">
             <div class="kaist_content">
-
                <div class="kaist_image">
-                  <img src="./img/kaist_laptop.png" alt="kaist" />
+                  <img src="./img/kaist_laptop.png" alt="kaist"/>
                </div>
 
                <div class="kaist_wrap">
                   <div class="kaist_text">
                      <h3>KAIST</h3>
-                     <span>카이스트 녹색성장지속가능대학원 공식 사이트를 클론 코딩하여 만든 PC 버전 반응형 웹사이트입니다.
-                        </span>
+                     <span>카이스트 녹색성장지속가능대학원 공식 사이트를 클론 코딩하여 만든 PC 버전 반응형 웹사이트입니다.</span>
                      <p>#HTML #CSS #JQUERY #JAVASCRIPT #KAIST</p>
                   </div>
                   <div class="kaist_button">
@@ -169,9 +162,8 @@
             </div>
          </div>
 
-         <div class="p_webpublic">
+         <div class="webpublic_swiper_slide">
             <div class="webpublic_content">
-
                <div class="webpublic_image">
                   <img src="./img/imac_webpublic.png" alt="webpublic"/>
                </div>
@@ -179,93 +171,94 @@
                <div class="webpublic_wrap">
                   <div class="webpublic_text">
                      <h3>WEBPUBLISHER</h3>
-                     <span>개인 포트폴리오 사이트를 제작하여 만든 PC 버전 반응형 웹사이트입니다. <br>
-                        해상도 기준 1920px 기준입니다.</span>
+                     <span>개인 포트폴리오 사이트를 제작하여 만든 PC 버전 반응형 웹사이트입니다.
+                     해상도 기준 1920px 기준입니다.</span>
                      <p>#HTML #CSS #JQUERY #WEBPUBLISHER</p>
                   </div>
                   <div class="webpublic_button">
                      <button><a href="https://dong507.github.io/portfolio/" target="_blank">Visit Website</a></button>
-                     <button><a href="https://github.com/dong507/ldh" target="_blank">Code Review</a></button>
+                     <button><a href="#" target="_blank">Code Review</a></button>
                   </div>
                </div>
             </div>
          </div>
 
-         <div class="p_HanwhaCulture">
+         <div class="HanwhaCulture_swiper_slide">
             <div class="HanwhaCulture_content">
-
                <div class="HanwhaCulture_image">
-                  <img src="./img/imac.png" alt="HanwhaCulture" style="width: 400px;height: 400px;"/>
+                  <img src="./img/imac_HanwhaCulture.png" alt="HanwhaCulture"/>
                </div>
 
                <div class="HanwhaCulture_wrap">
                   <div class="HanwhaCulture_text">
                      <h3>HanwhaCulture</h3>
-                     <span>한화문화재단 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다. <br> 해상도 기준 1920px 기준입니다.</span>
+                     <span>한화문화재단 공식 사이트를 클론 코딩하여 만든 PC 버전 웹사이트입니다. 해상도 기준 1920px 기준입니다.</span>
                      <p>#HTML #CSS #HanwhaCulture</p>
                   </div>
                   <div class="HanwhaCulture_button">
-                     <button><a href="../HanwhaCulture/hanwhaculture.html" target="_blank">Visit Website</a></button>
-                     <button><a href="" target="_blank">Code Review</a></button>
+                     <button><a href="https://dong507.github.io/hanwhaculture/" target="_blank">Visit Website</a></button>
+                     <button><a href="https://github.com/dong507/hanwhaculture" target="_blank">Code Review</a></button>
                   </div>
                </div>
             </div>
          </div>
 
-         <div class="p_KumhoPetrochemicalGroup">
-            <div class="KumhoPetrochemicalGroup_content">
-               <div class="KumhoPetrochemicalGroup_image">
-                  <img src="./img/imac.png" alt="KumhoPetrochemicalGroup" style="width: 400px;height: 400px;"/>
+         <div class="Kumho_swiper_slide">
+            <div class="Kumho_content">
+               <div class="Kumho_image">
+                  <img src="./img/imac.png" alt="KumhoPetrochemicalGroup"/>
                </div>
-               <div class="KumhoPetrochemicalGroup_wrap">
-                  <div class="KumhoPetrochemicalGroup_text">
+               <div class="Kumho_wrap">
+                  <div class="Kumho_text">
                      <h3>KumhoPetrochemicalGroup</h3>
-                     <span>금호석유화학 공식 사이트와 기업 사이트를 참고하여 만든 PC 버전 웹사이트 <br>입니다.
+                     <span>금호석유화학 공식 사이트와 기업 사이트를 참고하여 만든 PC 버전 웹사이트입니다.
                         해상도 기준 1920px 기준입니다.</span>
                      <p>#HTML #CSS #JQUERY #JAVASCRIPT #KumhoPetrochemicalGroup</p>
                   </div>
-                  <div class="KumhoPetrochemicalGroup_button">
+                  <div class="Kumho_button">
                      <button><a href="" target="_blank">Visit Website</a></button>
                      <button><a href="" target="_blank">Code Review</a></button>
                   </div>
                </div>
             </div>
          </div>
+
+         <div class="swiper_pagination"></div>
+         <!-- 슬라이드갯수 -->
+         <div class="swiper_button_prev"><i class="ri-arrow-left-s-line"></i></div>
+         <div class="swiper_button_next"><i class="ri-arrow-right-s-line"></i></div>
+         <!-- 슬라이드 버튼 -->
       </div>
    </section>
 
    <!-- design portfolio -->
-   <section class="swiper2 design_pofol">
+   <section class="swiper_design_porfol">
+      <div class=""></div>
       <!--
          * swiper
          *  한 화면에 섬네일이 2~3개 (slidesPerVies)
          * 섬네일을 클릭하면 팝업 => 카이스트의 올메뉴 참고
          * 페이지네이션   현재슬라이드 / 전체슬라이드 ( 4 / 29)
+         -> https://www.ybtour.co.kr/ 노랑풍선 참고
          * 섬네일 마우스오버 참고 => https://seojeongyun.creatorlink.net/
       -->
 
    </section>
 
    <!-- footer -->
-   <footer class="contact">
+   <footer class="contact" id="contact_section">
       <div class="contact_inner">
          <h2>CONTACT</h2>
          <div class="contact_introduction">
             <p>Thank you </p>
             <p>스스로에게 한계를 두지 않고 끊임없이 성장하는 웹퍼플리셔가 되겠습니다.</p>
-            <img src="./img/kakao_qr.png" alt="카카오톡 친구추가" style="width: 200px;height: 200px;">
+            <img src="./img/kakao_qr.png" alt="카카오톡 친구추가">
          </div>
          <ul class="contact_icon">
-            <li><a href="#" target="_blank">
-               <img src="./img/message.png" alt="메세지" title="메세지">
-            </a></li>
-            <li><a href="#" target="_blank">
-               <img src="./img/instagram.png" alt="인스타그램" title="인스타그램">
-            </a></li>
             <li><a href="mailto:leedonghee96@daum.net">
                <img src="./img/e-mail.png" alt="이메일" title="이메일">
             </a></li>
-            <li><a href="https://github.com/dong507 " target="_blank">
+            <li><a href="https://github.com/dong507" target="_blank">
                <img src="./img/github.png" alt="깃허브" title="깃허브">
             </a></li>
          </ul>
@@ -276,7 +269,7 @@
          </small>
       </div>
       <div class="footer_top">
-         <button><a href="#"><i class="ri-arrow-up-s-line"></i></a></button>
+         <button><a href="#home_section"><i class="ri-arrow-up-s-line"></i></a></button>
       </div>
    </footer>
 

@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// MainVisual
+// MainVisual, 마우스 이동
 const mainMask = document.querySelector('.mask')
 mainMask.addEventListener('click', () => {
 })
@@ -20,12 +20,15 @@ function homeMousemove(e) {
    })
 }
 
+// home_main 글씨 이동
 window.addEventListener('mousemove',homeMousemove)
+//defer 연결해서 function() 작성안함. (중복방지)
 
 const homeText = gsap.timeline();
 
 homeText.to('.home_main span', {xPercent: -70,duration: .3}, 'txt')
    .to('.home_main p', {xPercent: 130, duration: .3},'txt')
+   //txt 클래스 줘서 같이 움직이게 설정.
 
 ScrollTrigger.create({
    animation: homeText,
@@ -34,7 +37,7 @@ ScrollTrigger.create({
    end: 'bottom 50%',
    pin: true,
    scrub: true,
-   markers: true
+   markers: true,
 })
 
 
@@ -60,10 +63,28 @@ $(window).on('wheel', function(event) {
    }
 
    // 해당 섹션으로 스크롤
-   $('header, .home').animate({
-      scrollTop: $(sections[currentSection]).offset().top
+   $('.home').animate({
+      scrollTop: $(section[currentSection]).offset().top
    }, 500, function() {
       // 애니메이션 완료 후 스크롤 가능하게 설정
       isScrolling = false;
    });
+});
+
+
+// publishing silde
+const swiperWrap = new Swiper('#swp', {
+   // Optional parameters
+   direction: 'horizontal',
+   loop: true,
+   autoplay: true,
+
+   pagination: {
+      el: '.swiper_pagination',
+   },
+
+   navigation: {
+      nextEl: '.swiper_button_next',
+      prevEl: '.swiper_button_prev',
+   },
 });
